@@ -1,2 +1,5 @@
 .DS_Store
 *.zip
+
+# Local-only project notes for Claude agents — must never reach the public repo
+CLAUDE.md
