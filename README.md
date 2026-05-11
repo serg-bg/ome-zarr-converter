@@ -10,6 +10,16 @@ A simple macOS app that converts microscopy images (`.tif`, `.nd2`, `.czi`) to *
 
 Look under **Assets** for `OME-Zarr-Converter-mac.zip`. Double-click to unzip, then drag `OME-Zarr Converter.app` into your **Applications** folder.
 
+## Verify your download
+
+The release page publishes a SHA256 hash for `OME-Zarr-Converter-mac.zip`. After downloading, confirm the file is intact:
+
+```bash
+shasum -a 256 OME-Zarr-Converter-mac.zip
+```
+
+Compare the output to the hash listed on the [release page](https://github.com/serg-bg/ome-zarr-converter/releases/latest). They should match exactly.
+
 ## First launch (one-time)
 
 macOS may block the app the first time because it isn't signed by a paid Apple Developer ID:
@@ -55,7 +65,9 @@ After that, the **Open in napari** button next to each result launches a separat
 
 ## License
 
-[PolyForm Noncommercial 1.0.0](LICENSE) — free for academic, research, personal, and educational use. Commercial use requires a separate agreement; please contact the author.
+Copyright (C) 2026 Sergio Bernal-Garcia.
+
+Licensed under the [GNU General Public License v3.0](LICENSE) (GPL-3.0). You are free to use, modify, and redistribute under the terms of that license. Source code is available on request for at least 3 years from the date of each binary release; see the release notes for source-request details.
 
 ## Author
 
