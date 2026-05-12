@@ -42,7 +42,7 @@ Click **▶ Advanced** to set:
 
 - **Voxel spacing (µm)** — auto-detected from `.nd2` / `.czi` metadata; falls back to `1.0` µm for `.tif` if you leave it blank
 - **Treat input as labels / segmentation** — uses subsampling instead of mean-pooling when building the pyramid (preserves integer label IDs)
-- **Channel** — pick a single channel from a multi-channel file (default: 0)
+- **Channel** — pick a single channel from a multi-channel file (0-indexed; default: 0)
 - **Pyramid levels** — how many resolution levels to generate (default: 4)
 
 ## Viewing in napari (optional)
