@@ -61,6 +61,8 @@ After that, the **Open in napari** button next to each result launches a separat
 
 Already have a converted `.ome.zarr`? You can view it in napari without reconverting:
 
+![Open existing OME-Zarr dialog](docs/open-existing-dialog.png)
+
 1. Click **Open existing OME-Zarr in napari…**, or **drag an `.ome.zarr` folder** onto the drop area.
 2. In the picker, choose the **3D volume resolution** — the list shows the pyramid levels actually present in your file, with their dimensions.
 3. *(Optional)* overlay a **labels / segmentation** store. If a matching `<name>_labels.ome.zarr` sits next to the image, it's filled in automatically; otherwise click **Add labels…**. You can toggle **Smooth 3D labels** and a **Contour** width.
