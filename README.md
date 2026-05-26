@@ -57,6 +57,17 @@ After that, the **Open in napari** button next to each result launches a separat
 - Click the **cube icon** at the bottom-left of napari to switch to **3D volume** view.
 - The **3D volume resolution** dropdown in the converter controls which pyramid level the 3D view uses. *Full res* is sharpest but heaviest; *Half / Quarter / Eighth* are progressively lighter for snappier rotation.
 
+### Open an existing OME-Zarr (no conversion needed)
+
+Already have a converted `.ome.zarr`? You can view it in napari without reconverting:
+
+1. Click **Open existing OME-Zarr in napari…**, or **drag an `.ome.zarr` folder** onto the drop area.
+2. In the picker, choose the **3D volume resolution** — the list shows the pyramid levels actually present in your file, with their dimensions.
+3. *(Optional)* overlay a **labels / segmentation** store. If a matching `<name>_labels.ome.zarr` sits next to the image, it's filled in automatically; otherwise click **Add labels…**. You can toggle **Smooth 3D labels** and a **Contour** width.
+4. Click **Open in napari** — same behavior as above (2D multiscale, your chosen level in 3D).
+
+Single-channel 3D (ZYX) volumes are supported. Multichannel or time-series stores aren't supported yet — you'll get a clear message rather than a silent failure.
+
 ## System requirements
 
 - macOS 12 or later (Apple Silicon or Intel)
