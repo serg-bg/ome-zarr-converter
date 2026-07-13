@@ -68,6 +68,13 @@ Already have a converted `.ome.zarr`? You can view it in napari without reconver
 3. *(Optional)* overlay a **labels / segmentation** store. If a matching `<name>_labels.ome.zarr` sits next to the image, it's filled in automatically; otherwise click **Add labels…**. You can toggle **Smooth 3D labels** and a **Contour** width.
 4. Click **Open in napari** — same behavior as above (2D multiscale, your chosen level in 3D).
 
+#### Editing labels (paint and save back)
+
+Tick **Edit labels** to load the labels at full resolution as an **editable** layer instead of a read-only overlay. Paint and correct segmentation directly in napari with the brush and fill tools, then click **Save labels** (a button added to napari's right-hand dock) to write the corrected labels back to the store — the multi-resolution pyramid is regenerated automatically, so the saved store stays consistent at every zoom level.
+
+- Works whether you're correcting an **existing** labels store or starting from a **blank** layer — leave the labels overlay empty to annotate from scratch, and a new `<image>_labels.ome.zarr` is created next to the image.
+- Editing loads the full-resolution labels into memory; volumes too large to fit are refused with a clear message rather than crashing.
+
 Single-channel 3D (ZYX) volumes are supported. Multichannel or time-series stores aren't supported yet — you'll get a clear message rather than a silent failure.
 
 ## System requirements
